@@ -4,7 +4,7 @@ import { UserLayoutComponent } from './user-layout/user-layout.component';
 import { RouterModule } from '@angular/router';
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { AuthAdminComponent } from './auth-admin/auth-admin.component'
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,8 @@ import { AuthAdminComponent } from './auth-admin/auth-admin.component'
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ]
 })
 export class LayoutModule { }

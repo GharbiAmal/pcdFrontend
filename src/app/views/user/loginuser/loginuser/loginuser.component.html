@@ -5,17 +5,19 @@
           <div class="auth-avatar">
             <img src="https://pluspng.com/img-png/user-png-icon-account-avatar-human-male-man-men-people-person-download-svg-download-png-edit-icon-512.png" alt="user" class="user-image">
           </div>
-          <form>
+          <form #f="ngForm" (ngSubmit)="loginuser(f)">
             <div class="mb-3">
               <label for="email">Email : </label>
-              <input type="email" name="email" class="form-control" placeholder="Email" required>
+              <input type="email" name="email" #email="ngModel" ngModel class="form-control" placeholder="Email" required>
             </div>
            
             <div class="mb-3">
               <label for="password">Password : </label>
-              <input type="password" name="password" class="form-control" placeholder="********" required>
+              <input type="password" name="password" #password="ngModel" ngModel class="form-control" placeholder="********" required>
             </div>
-           
+            <div class="alert alert-danger" *ngIf="messageError">
+              {{messageError}}
+          </div>
             <input type="submit" class="btn btn-primary" value="Sign In">
             
             <div class="text-center mt-3">

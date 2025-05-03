@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewEncapsulation } from '@angular/core';
+import { AuthuserService } from 'src/app/views/services/authuser.service';
+
 @Component({
   selector: 'app-auth-admin',
   templateUrl: './auth-admin.component.html',
@@ -8,7 +10,7 @@ import { ViewEncapsulation } from '@angular/core';
 })
 export class AuthAdminComponent implements OnInit {
 
-  constructor() { }
+  constructor(public ap:AuthuserService) { }
 
   ngOnInit(): void {
   }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ChatbotRoutingModule } from './chatbot-routing.module';
 import { ChatbotComponent } from './chatbot/chatbot.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ChatbotComponent } from './chatbot/chatbot.component';
   ],
   imports: [
     CommonModule,
-    ChatbotRoutingModule
+    ChatbotRoutingModule,
+    FormsModule
   ]
 })
 export class ChatbotModule { }

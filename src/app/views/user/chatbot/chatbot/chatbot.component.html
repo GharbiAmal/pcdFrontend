@@ -1,29 +1,59 @@
-<body>
+<!--<body>
     <div class="container">
-      <!-- App Header -->
+      
       <header class="app-header">
         <h1 class="heading">Hello, there</h1>
         <h4 class="sub-heading">How can I help you today?</h4>
       </header>
 
-      <!-- Chats -->
+      
       <div class="chats-container"></div>
-      <!-- Prompt Input -->
+      
       <div class="prompt-container">
         <div class="prompt-wrapper">
           <form action="#" class="prompt-form">
             <input type="text" placeholder="Ask me" class="prompt-input" required />
             <div class="prompt-actions">
-              <!-- File Upload Wrapper -->
+              
               <div class="file-upload-wrapper">
                 <button id="add-file-btn" type="button" class="material-symbols-rounded">send</button>
               </div>
             </div>
           </form>
-          <!-- Theme and Delete Chats Buttons -->
+          
           
           <button id="delete-chats-btn"></button>
         </div>
       </div>
     </div>
-</body>
+</body> -->
+
+<div class="chat-container">
+  <h2>Chatbot IA</h2>
+
+  <div class="input-group">
+    <input
+      type="text"
+      [(ngModel)]="question"
+      placeholder="Posez votre question..."
+      (keyup.enter)="submitQuestion()"
+    >
+    <button (click)="submitQuestion()" [disabled]="isLoading">
+      {{ isLoading ? 'Envoi en cours...' : 'Envoyer' }}
+    </button>
+  </div>
+
+  <div *ngIf="response">
+    <h3>Réponse :</h3>
+    <div *ngIf="response.success; else errorBlock">
+      <div *ngFor="let result of response.results" class="result-card">
+        <h4>{{ result.source }} (Page {{ result.page }})</h4>
+        <p>Probabilité: {{ result.probability | percent }}</p>
+        <p>{{ result.content }}</p>
+      </div>
+    </div>
+    <ng-template #errorBlock>
+      <p class="error">{{ response.message }}</p>
+    </ng-template>
+  </div>
+</div>
