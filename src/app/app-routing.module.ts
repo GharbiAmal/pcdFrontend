@@ -10,7 +10,8 @@ const routes: Routes = [
     {path:'login',loadChildren:()=>import('./views/user/loginuser/loginuser.module').then(m=>m.LoginuserModule)},
     {path:'home',loadChildren:()=>import('./views/user/home/home.module').then(m=>m.HomeModule)},
     {path:'signup',loadChildren:()=>import('./views/user/register/register.module').then(m=>m.RegisterModule)},
-    {path:'chatbot',loadChildren:()=>import('./views/user/chatbot/chatbot.module').then(m=>m.ChatbotModule)}
+    {path:'chatbot',loadChildren:()=>import('./views/user/chatbot/chatbot.module').then(m=>m.ChatbotModule)},
+    {path:'feedback',loadChildren:()=>import('./views/user/addfeedback/addfeedback.module').then(m=>m.AddfeedbackModule)}
 
 ]},
   {path:'admin/login',component:AuthAdminComponent}

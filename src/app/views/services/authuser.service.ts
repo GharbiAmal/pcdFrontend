@@ -46,7 +46,7 @@ export class AuthuserService {
 
   }
 
-  parentLoggedIn(){
+  userLoggedIn(){
     let token =localStorage.getItem('token') 
 
     
@@ -69,4 +69,16 @@ export class AuthuserService {
   }
 
  }
+
+
+
+
+ createFeedback(feed:any){
+  return this.http.post('http://localhost:3000/createfeedback',feed)
+}
+
+getFeedbackByIdUser(id:any){  
+  return this.http.get('http://localhost:3000/onefeedbackbyuser/'+id)
+}
+
 }

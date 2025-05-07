@@ -17,22 +17,39 @@
                 <a class="nav-link" routerLink="/user/home">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="/user/home" fragment="about_section"> About</a>
+                <a class="nav-link" routerLink="/user/home" fragment="about_section" *ngIf="ap.userLoggedIn() == false"> About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="/user/home" fragment="service_section">Services</a>
+                <a class="nav-link" routerLink="/user/home" fragment="service_section" *ngIf="ap.userLoggedIn() == false">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="/user/home" fragment="why_section">Why Us</a>
+                <a class="nav-link" routerLink="/user/home" fragment="why_section" *ngIf="ap.userLoggedIn() == false">Why Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="/user/home" fragment="team_section">Team</a>
+                <a class="nav-link" routerLink="/user/home" fragment="team_section" *ngIf="ap.userLoggedIn() == false">Team</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="/user/login"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
+                <a class="nav-link" routerLink="/user/login"  *ngIf="ap.userLoggedIn() == false"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="/user/signup"> <i class="fa fa-user" aria-hidden="true"></i> signUp</a>
+                <a class="nav-link" routerLink="/user/signup"  *ngIf="ap.userLoggedIn() == false"> <i class="fa fa-user" aria-hidden="true"></i> signUp</a>
+              </li>
+
+
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/user/chatbot"  *ngIf="ap.userLoggedIn() == true"> Chatbot</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/user/signup"  *ngIf="ap.userLoggedIn() == true"> Add Feedback</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/user/signup" *ngIf="ap.userLoggedIn() == true"> <i class="fa fa-user" aria-hidden="true"></i> Set Profil</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" (click)="Logout()" routerLink="/user/home" *ngIf="ap.userLoggedIn() == true"> <i class="fa fa-user" aria-hidden="true"></i> Logout</a>
               </li>
             </ul>
           </div>
