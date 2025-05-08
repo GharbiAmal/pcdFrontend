@@ -24,7 +24,7 @@ export class ChatbotComponent implements OnInit {
 
     this.apiService.askQuestion(this.question).subscribe({
       next: (res) => {
-        console.log('Réponse API:', res);
+        console.log('Response API:', res);
         this.response = res;
         this.isLoading = false;
       },

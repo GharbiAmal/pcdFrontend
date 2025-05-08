@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    transition: 0.3s linear;
+  }
+  
+  .content{
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    border-radius: 8px;
+  
+  }
+  
+  .card{
+    border-radius: 8px;
+    
+  }
+  
+  .card-box{
+    border-radius: 8px;
+  }
+  
+  .band{
+    width: 300px;
+       
+  }
+  
+
+  
+  img{
+    width:70px; 
+    height: 70px;
+    margin-top: 20px;
+    
+  }
+  
+  .form-group {
+      
+    position: relative;
+    width: 400px;
+    padding-top: 15px;
+  }
+  
+  
+  
+  .form-group input {
+    border: 1px solid #ddd;
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 5px;
+    font-size: 15px;
+    width: 300px;
+  }
+  
+  .eyeicon {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      cursor: pointer;
+    }
+  
+    .btn-edit{
+    
+      width: 90px; 
+      height: 45px;
+      background-color: #0f054c;
+      color: white;
+      border-radius: 15px;
+      border: none;
+    }
+  
+    .btn-edit-pass{
+      width: 150px; 
+      height: 45px;
+      background-color: #0f054c;
+      color: white;
+      border-radius: 15px;
+      border: none;
+    }
+    
+    .nav-link{
+      font-weight: bold;
+    }
+  
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+      color: #fff;
+      background-color: #0f054c ;
+      font-weight: bold;
+      box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(0, 140, 255, 0.5);
+  }
+  

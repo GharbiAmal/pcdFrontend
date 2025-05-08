@@ -1,0 +1,5 @@
+.custom-card {
+    background-color: #0f054c; /* couleur de fond */
+    color: #fff;              /* couleur du texte */
+    border: 1px solid #ccc;   /* bordure optionnelle */
+  }

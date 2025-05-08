@@ -70,6 +70,20 @@ export class AuthuserService {
 
  }
 
+ getOneUser(id:any){  
+  return this.http.get('http://localhost:3000/user/getuser/'+id)
+}
+
+ //edit profil 
+ updateUser(id:string,newprofil:any){
+  return this.http.patch('http://localhost:3000/user/updateUser/'+id,newprofil)
+
+}
+
+updatepassword(id:string,newPassword:any){
+  return this.http.patch('http://localhost:3000/updatePassword/'+id,newPassword)
+
+}
 
 
 

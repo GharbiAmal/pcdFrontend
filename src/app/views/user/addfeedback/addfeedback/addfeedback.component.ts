@@ -40,8 +40,8 @@ dataArray:any=[]
     this.ap.createFeedback(data).subscribe(
       res => {
         Swal.fire({
-          title: 'Ajouté avec succès',
-          text: 'Votre feedback a été ajouté.',
+          title: 'Added successfully',
+          text: 'Your feedback has been added.',
           icon: 'success',
           confirmButtonColor: '#3085d6',
           timer: 2000

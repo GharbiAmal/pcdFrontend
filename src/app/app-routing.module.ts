@@ -11,7 +11,10 @@ const routes: Routes = [
     {path:'home',loadChildren:()=>import('./views/user/home/home.module').then(m=>m.HomeModule)},
     {path:'signup',loadChildren:()=>import('./views/user/register/register.module').then(m=>m.RegisterModule)},
     {path:'chatbot',loadChildren:()=>import('./views/user/chatbot/chatbot.module').then(m=>m.ChatbotModule)},
-    {path:'feedback',loadChildren:()=>import('./views/user/addfeedback/addfeedback.module').then(m=>m.AddfeedbackModule)}
+    {path:'feedback',loadChildren:()=>import('./views/user/addfeedback/addfeedback.module').then(m=>m.AddfeedbackModule)},
+    {path:'setprofil',loadChildren:()=>import('./views/user/editprofil/editprofil.module').then(m=>m.EditprofilModule)},
+    {path:'password/:id',loadChildren:()=>import('./views/user/password/password.module').then(m=>m.PasswordModule)},
+
 
 ]},
   {path:'admin/login',component:AuthAdminComponent}

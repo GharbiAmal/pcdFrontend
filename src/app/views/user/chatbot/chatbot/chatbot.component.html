@@ -1,34 +1,51 @@
-<!--<body>
+<body>
     <div class="container">
       
       <header class="app-header">
-        <h1 class="heading">Hello, there</h1>
+        <h1 class="heading">Hello,</h1>
         <h4 class="sub-heading">How can I help you today?</h4>
       </header>
 
       
-      <div class="chats-container"></div>
+      <div class="chats-container" *ngIf="response">
+        <h3>Response :</h3>
+    <div *ngIf="response.success; else errorBlock">
+      <div *ngFor="let result of response.results" class="result-card">
+
+        <!-- <p>Probabilité: {{ result.probability | percent }}</p> -->
+        <p>{{ result.content }}</p>
+      </div>
+    </div>
+    <ng-template #errorBlock>
+      <p class="error">{{ response.message }}</p>
+    </ng-template>
+      </div>
       
       <div class="prompt-container">
         <div class="prompt-wrapper">
-          <form action="#" class="prompt-form">
-            <input type="text" placeholder="Ask me" class="prompt-input" required />
+          
+            <input type="text"
+            [(ngModel)]="question"
+            (keyup.enter)="submitQuestion()" placeholder="Ask me .." class="prompt-input" required />
             <div class="prompt-actions">
               
               <div class="file-upload-wrapper">
-                <button id="add-file-btn" type="button" class="material-symbols-rounded">send</button>
+                <button (click)="submitQuestion()" [disabled]="isLoading" id="add-file-btn" class="material-symbols-rounded" style="font-size: 15px;">{{ isLoading ? 'Sending...' : 'Send' }}</button>
               </div>
             </div>
-          </form>
+         
           
           
-          <button id="delete-chats-btn"></button>
+          
         </div>
       </div>
     </div>
-</body> -->
+</body>
 
-<div class="chat-container">
+
+
+
+<!-- <div class="chat-container">
   <h2>Chatbot IA</h2>
 
   <div class="input-group">
@@ -56,4 +73,4 @@
       <p class="error">{{ response.message }}</p>
     </ng-template>
   </div>
-</div>
+</div> -->

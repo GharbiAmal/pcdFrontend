@@ -25,9 +25,9 @@ export class RegisterComponent implements OnInit {
  
  
       Swal.fire({
-       title: 'Registre avec succées',
-       text: "Vous étes enregistré dans notre site!",
-       icon: 'success',
+        title: 'Registered successfully',
+        text: "You are registered on our site!",
+        icon: 'success',        
        confirmButtonColor: '#3085d6',
        timer:2000
  

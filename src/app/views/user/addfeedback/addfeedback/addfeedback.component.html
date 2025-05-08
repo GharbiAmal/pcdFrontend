@@ -1,12 +1,12 @@
 <div class="container col-md-8 col-lg-60 w3-panel w3-leftbar w3-border-blue w3-border w3-round-xlarge ">
     <br>
-    <h5 style="color:#4e73df; text-align: center; font-weight: bold;">add your feedback about our application </h5>
+    <h5 style="color:#0f054c; text-align: center; font-weight: bold;">Give us your feedback about our application. </h5>
     <hr><br>
       <form #f="ngForm" (ngSubmit)="addfeedback(f)">
   
           <div class="form-group">
-              <label for="exampleFormControlTextarea1" >Description</label>
-              <textarea class="form-control"  rows="4" placeholder="Description" required name="description" #description="ngModel" ngModel minlength="8"></textarea>
+              <label for="exampleFormControlTextarea1" >Comment</label>
+              <textarea class="form-control"  rows="4" placeholder="Leave a comment" required name="description" #description="ngModel" ngModel minlength="8"></textarea>
             </div>
     
 
@@ -29,7 +29,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card mb-4" *ngFor="let item of dataArray; index as i">
-                    <div class="card-header">
+                    <div class="card-header custom-card">
                         Date : {{item.date}}
                     </div>
                     <div class="card-body">
